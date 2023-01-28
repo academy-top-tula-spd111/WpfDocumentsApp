@@ -1,0 +1,96 @@
+﻿<Window x:Class="WpfDocumentsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDocumentsApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <FlowDocumentReader>
+            <FlowDocument ColumnWidth="800">
+                <Paragraph>Hello world
+                    <Figure HorizontalAnchor="ContentLeft">
+                        <Paragraph>Floater text</Paragraph>
+                    </Figure>
+                </Paragraph>
+                
+                <Paragraph>
+                    <LineBreak/>
+                    <Span Background="Bisque">
+                        <Run>Hello people</Run>
+                        <Run>Hello people</Run>
+                        <Bold>Hello people</Bold>
+                        <Italic>Hello people</Italic>
+                        <Underline>Hello people</Underline>
+                    </Span>
+                    <Bold>
+                        <Italic>
+                            <Underline>Hello people</Underline>
+                        </Italic>
+                    </Bold>
+                    <LineBreak/>
+                    <Hyperlink NavigateUri="http://ya.ru">Yandex</Hyperlink>
+                    <InlineUIContainer>
+                        <Button>Inline button</Button>
+                    </InlineUIContainer>
+                    
+                    
+                </Paragraph>
+                <List MarkerStyle="Disc">
+                    <ListItem>
+                        <Paragraph>Item 1</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Item 2</Paragraph>
+                    </ListItem>
+                </List>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="1*"/>
+                        <TableColumn Width="1*"/>
+                        <TableColumn Width="1*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell BorderThickness="1" BorderBrush="Black">
+                                <Paragraph>10</Paragraph>
+                            </TableCell>
+                            <TableCell BorderThickness="1" BorderBrush="Black">
+                                <Paragraph>20</Paragraph>
+                            </TableCell>
+                            <TableCell BorderThickness="1" BorderBrush="Black">
+                                <Paragraph>30</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderThickness="1" BorderBrush="Black">
+                                <Paragraph>40</Paragraph>
+                            </TableCell>
+                            <TableCell BorderThickness="1" BorderBrush="Black">
+                                <Paragraph>50</Paragraph>
+                            </TableCell>
+                            <TableCell BorderThickness="1" BorderBrush="Black">
+                                <Paragraph>60</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Section Background="Aqua">
+                    <Paragraph>Hello world</Paragraph>
+                    <Paragraph>
+                        <Run>Hello people</Run>
+                    </Paragraph>
+                </Section>
+                <Paragraph x:Name="p1"></Paragraph>
+                <BlockUIContainer>
+                    <StackPanel Width="200">
+                        <TextBox />
+                        <Button Content="Click me"/>
+                    </StackPanel>
+                </BlockUIContainer>
+                <Paragraph>FlowDocument обеспечивает надежную модель содержимого для дочернего содержимого. Дочерние элементы верхнего уровня, содержащиеся в элементе, FlowDocument должны быть производными от Block. Допустимые дочерние элементы верхнего уровня включают следующие:</Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+    </Grid>
+</Window>
